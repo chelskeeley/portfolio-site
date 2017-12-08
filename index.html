@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="/public/styles/style.css">
     <script src="https://use.fontawesome.com/a32ce8b2ea.js"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/public/styles/style.css">
     <title>Chelsea Keeley</title>
 </head>
 <body>
@@ -19,30 +20,33 @@
                 </div>
             </div>
             <nav>
-                <ul>
+                <ul class="nav__menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#aboutMe">About Me</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#myWorks">My Works<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                        <ul>
+                    <li><a href="#myWorks">My Work</a>
+                        <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
+                        <!-- <ul class="nav__subMenu">
                             <li><a href="#work1">Codex</a></li>
                             <li><a href="#work2">Draughted</a></li>
                             <li><a href="#work3">Can You Make It?</a></li>
                             <li><a href="#work4">Game of Strife!</a></li>
                             <li><a href="#work5">ZAP!</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <h1><span>Hi,</span> I am Chelsea Keeley!</h1>
-            <h2>Web Developer</h2>
+            <div class="header__mainTitle">
+                <h1><span>Hi,</span> I'm Chelsea Keeley!</h1>
+                <h2>Front End Web Developer</h2>
+            </div>
             <!-- mouse icon??? -->
         </div><!--end of wrapper-->
     </header>
     <section class="aboutMe" id="aboutMe">
         <div class="wrapper">
-            <h2>About Me</h2>
+            <h2 class="section__title">About Me</h2>
             <div class="aboutMe__content">
                 <div class="aboutMe__description">
                     <p>Hi, I’m Chelsea! I am a front-end web developer based in Toronto, and I am passionate about building user-friendly, responsive websites with clean and efficient code. As a committed team member, I am dedicated to collaborating with co-workers in dynamic settings to produce the highest quality work possible.</p>
@@ -64,7 +68,7 @@
     </section><!--end of aboutMe-->
     <section class="skills" id="skills">
         <div class="wrapper">
-            <h2>Skills</h2>
+            <h2 class="section__title">Skills</h2>
             <div class="skills__content">
                 <div class="skills__imageContainer">
                     <img src="/public/assets/hexagon.png" alt="A hexagonal decorative shape" class="skills__image--shape1">
@@ -114,7 +118,7 @@
     </section><!--end of skills-->
     <section class="myWorks" id="myWorks">
         <div class="wrapper">
-            <h2>My Work</h2>
+            <h2 class="section__title">My Work</h2>
             <div class="work1" id="work1">
                 <div class="work1__content">
                     <div class="work1__imageContainer">
@@ -240,7 +244,7 @@
     </section><!--end of myWorks-->
     <section class="contact" id="contact">
         <div class="wrapper">
-            <h2>Say Hello!</h2>
+            <h2 class="section__title">Say Hello!</h2>
             <div class="contact__container">
                 <form action="">
                     <label for="name">Your Name</label>
@@ -259,13 +263,13 @@
     </section><!--end of contact-->
     <footer>
         <div class="wrapper">
-            <h2>Connect With Me!</h2>
+            <h2 class="section__title">Connect With Me!</h2>
             <div class="footer__iconContainer">
-                <a href="mailto:chelsea@chelseakeeley.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/chelscodes"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://github.com/chelskeeley"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/chelsea-keeley/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                <a href="https://medium.com/chels-codes"><i class="fa fa-medium" aria-hidden="true"></i></a>
+                <a href="mailto:chelsea@chelseakeeley.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/chelscodes" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://github.com/chelskeeley" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/chelsea-keeley/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                <a href="https://medium.com/chels-codes" target="_blank"><i class="fa fa-medium" aria-hidden="true"></i></a>
             </div>
         </div><!--end of wrapper-->
         <div class="footer__banner">
@@ -279,6 +283,7 @@
 
     
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="/public/scripts/main.js"></script>
 
     <!-- CREDITS

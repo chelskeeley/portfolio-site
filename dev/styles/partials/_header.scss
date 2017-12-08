@@ -1,0 +1,78 @@
+//header styles
+
+//general header
+header {
+    min-height: 100vh;
+    background: linear-gradient( rgba(240,239,239,0.8), rgba(240,239,239,0.8) ), url(../assets/hero2.jpg);
+    background-size: cover;
+    background-position: center;
+    h1 {
+        margin: 0;
+        // padding-top: 50%;
+        // transform: translateY(-50%);
+    }
+    h2 {
+        margin: 0;
+        // transform: translateY(-100%);
+        
+    }
+}
+
+//header banner (name and search)
+
+.header__banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+    p {
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight: 500;
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 15px;
+            height: 3px;
+            background: $fontColor;
+        }
+        &:before {
+            top: 17px;
+        }
+        &:after {
+            left: 63px;
+            bottom: 17px;
+        }
+    }
+}
+
+//main title
+
+.header__mainTitle {
+    margin-top: 35vh;
+    transform: translateY(-50%)
+}
+
+//navigation
+
+nav {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+    padding-top: 20vh;
+    border-right: 1px solid $fontColor;
+    li {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    a {
+        color: $fontColor;
+        font-weight: 500;
+    }
+}
+
+
+//KEEP STYLING NAVIGATION, THEN AFTER ELEMENTS ON SECITONS TO MAKE CHEVRONS
