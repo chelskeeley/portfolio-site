@@ -64,15 +64,78 @@ nav {
     bottom: 0;
     padding-top: 20vh;
     border-right: 1px solid $fontColor;
+    z-index: 10;
     li {
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 35px;
+        padding-right: 30px;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            background: $fontColor;
+            position: absolute;
+            left: 146px;
+            bottom: 8px;
+        }
+        &:first-child a:hover:after  {
+            width: 65px;
+        }
+        &:nth-child(2) a:hover:after {
+            width: 30px;
+        }
+        &:nth-child(3) a:hover:after {
+            width: 65px;
+        }
+        &:nth-child(4) a:hover:after {
+            width: 40px;
+        }
+        &:last-child a:hover:after {
+            width: 40px;
+        }
     }
     a {
         color: $fontColor;
         font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: all 0.3s;
+        
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 13px;
+            width: 13px;
+            border: 1px solid $fontColor;
+            border-radius: 50%;
+            left: 142px;
+            background: #fff;
+            z-index: 20;
+            transition: all 0.3s;
+            
+        }
+        &:hover:before {
+            background: transparent;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            background: $fontColor; 
+            right: 0;
+            bottom: 10px;
+            transition: all 0.3s;
+            width: 0;
+        }
+        
+        &:hover {
+            background: $fontColor;
+            color: #fff;
+        }
     }
 }
-
-
-//KEEP STYLING NAVIGATION, THEN AFTER ELEMENTS ON SECITONS TO MAKE CHEVRONS
