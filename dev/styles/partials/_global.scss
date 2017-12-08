@@ -1,6 +1,17 @@
 // mixins
 $mainFont: 'Roboto', sans-serif;
 $fontColor: #282828;
+$firstBackground: #F0EFEF;
+$secondBackground: #f7f7f7;
+$thirdBackground: #fff;
+
+// header background color #F0EFEF
+//About me background color #f7f7f7
+//skills background #fff
+//myWork background #F0EFEF
+//sayHello backgorund #f7f7f7
+//footer background #fff
+
 
 
 //global styles
@@ -9,7 +20,7 @@ html {
 }
 
 body {
-    background: darkcyan;
+    // background: darkcyan;
     font-size: 1.6rem;
     font-family: $mainFont;
     color: $fontColor;
@@ -56,6 +67,7 @@ h2 {
     font-size: 3.6rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin: 0;
 }
 
 header h2 {
@@ -77,5 +89,92 @@ p {
     line-height: 2.8rem;
 }
 
-// -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 81%, 50% 100%, 0 80%, 0 20%);
-// clip-path: polygon(50% 0%, 100% 20%, 100% 81%, 50% 100%, 0 80%, 0 20%);
+// .section__title {
+//     padding-top: 60px;
+// }
+
+section {
+    padding: 80px 0;
+}
+
+footer {
+    padding-top: 80px;
+}
+
+//section shaper for cheveron (after element)
+
+// header:after {
+//     content: '';
+//     width: 0;
+//     height: 0;
+//     border-style: solid;
+//     border-color: $fontColor transparent transparent;
+//     border-width: 20px 15px 0 15px;
+//     position: relative;
+//     display: block;
+//     bottom: -8px;
+// }
+
+// header:after,
+// section:after {
+//     // content: '';
+//     // width: 100vw;
+//     // height: 150px;
+//     // border-style: solid;
+//     // border-color: rebeccapurple transparent transparent transparent;
+//     // border-width:  100px 25vw;
+//     // position: relative;
+//     // display: block;
+//     // bottom: 0;
+//      content:'';
+//     position: relative;
+//     top: 100%;
+//     left: 0;
+//     right: 0;
+//     // margin-left: -50px;
+//     width: 0;
+//     height: 0;
+//     border-top: solid 100px #e15915;
+//     border-left: solid 50vw transparent;
+//     border-right: solid 50vw transparent;
+// }
+
+.triangle {
+	width: 100%;
+	height: 0;
+	// border-left: 49vw solid transparent;
+	// border-right: 49vw solid transparent;
+	// border-top: 10vh solid $firstBackground;
+}
+
+.myWorks {
+    background: $firstBackground;
+}
+
+.aboutMe,
+.contact {
+    background: $secondBackground;
+}
+
+.skills,
+footer {
+    background: $thirdBackground;
+}
+
+.first {
+    border-top: 20vh solid $firstBackground;
+    border-left: 49vw solid $secondBackground;
+	border-right: 49vw solid $secondBackground;
+}
+
+.second {
+	border-top: 20vh solid $secondBackground;
+    border-left: 49vw solid $thirdBackground;
+	border-right: 49vw solid $thirdBackground;
+}
+
+.third {
+    border-top: 20vh solid $thirdBackground;
+    border-left: 49vw solid $firstBackground;
+	border-right: 49vw solid $firstBackground;
+}
