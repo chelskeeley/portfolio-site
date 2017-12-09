@@ -9,8 +9,13 @@
 }
 
 .skills__imageContainer {
-    width: 40%;
+    width: 45%;
     position: relative;
+    padding-top: 20px;
+    @include tablet {
+        display: none;
+    }
+    
     img {
         width: 100%;
     }
@@ -20,11 +25,11 @@
         z-index: 0;
     }
     .hex1 {
-        top: -30px;
+        top: -10px;
         left: -30px;
     }
     .hex2 {
-        top: 30px;
+        top: 50px;
         left: 30px;
     }
     .imageHex {
@@ -34,14 +39,20 @@
 }
 
 .skills__flexIcons {
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
+    @include tablet {
+        width: 100%;
+    }
     div {
         width: 30%;
         margin-bottom: 40px;
+        @media (max-width: 400px){
+            width: 50%;
+        }
     }
     i {
         font-size: 5rem;

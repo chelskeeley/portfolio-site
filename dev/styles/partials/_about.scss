@@ -3,18 +3,39 @@
 .aboutMe__content {
     display: flex;
     margin-top: 30px;
+    @media (max-width: 1100px){
+        flex-direction: column;
+    }
 }
 
 .aboutMe__description {
-    width: 55%;
+    width: 50%;
+    padding-top: 10px;
+    @media (max-width: 1100px){
+        width: 100%;
+        order: 2;
+        
+    }
 }
 
 .aboutMe__headshot {
-    width: 30%;
+    width: 40%;
     border: 3px solid $firstBackground;
     border-radius: 50%;
     margin-left: 30px;
     align-self: flex-start;
+    @media (max-width: 1250px){
+        width: 50%;
+    }
+    @media (max-width: 1100px){
+        width: 70%;
+        align-self: center;
+        order: 1;
+        margin: 0 0 20px 0;
+    }
+    @include phone {
+        width: 100%;
+    }
     img {
         width: 100%;
         border-radius: 50%;
@@ -31,7 +52,7 @@
 .aboutMe__ellipseMedium {
     width: 80px;
     position: absolute;
-    right: 0;
+    right: 40px;
     top: 0;
     img {
         width: 100%;
@@ -40,14 +61,16 @@
 
 .aboutMe__ellipse--outer {
     background-image: url(/public/assets/ellipseOuter.png);
-    // display: inline-block;
     width: 110px;
     height: 110px;
     background-size: cover;
-    border: 1px solid $secondBackground;
+    border: 1px solid rgba(255,255,255,0);
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -50px;
+    right: -30px;
+    @media (max-width: 1100px){
+        display: none;
+    }
     
 }
 
@@ -57,4 +80,7 @@
     background-image: url(/public/assets/ellipseInner.png);
     background-size: cover;
     margin: 5px 0 0 10px;
+    @media (max-width: 1100px){
+        display: none;
+    }
 }
