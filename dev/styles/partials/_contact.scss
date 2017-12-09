@@ -26,3 +26,35 @@
     overflow: hidden;
 }
 
+input[type=text],
+input[type=email] {
+    padding: 5px 0;
+    background: transparent;
+    margin-bottom: 40px;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(40,40,40,0.5);
+    &::placeholder{
+        font-family: $mainFont;
+        color: rgba(40,40,40,0.7);
+    }
+}
+
+input[type=submit] {
+    color: $fontColor;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid $fontColor;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    background: none;
+    &:hover,
+    &:focus {
+        color: #fff;
+        background: $fontColor;
+    }
+}
+

@@ -1,0 +1,37 @@
+//footer styles
+
+.footer__iconContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+    padding: 60px 0;
+    a {
+        padding: 20px;
+        display: block;
+        color: $fontColor;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid $fontColor;
+        transition: all 0.3s;
+        background: none;
+        i{
+            font-size: 3.2rem;
+        }
+        &:hover,
+        &:focus {
+            color: #fff;
+            background: $fontColor;
+        }
+    }
+}
+
+.footer__banner {
+    background: $firstBackground;
+    padding: 20px 0;
+    p {
+        margin: 0;
+        text-align: center;
+    }
+}
