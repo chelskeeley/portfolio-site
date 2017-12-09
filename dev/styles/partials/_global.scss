@@ -1,9 +1,31 @@
-// mixins
+// mixins and variables
 $mainFont: 'Roboto', sans-serif;
 $fontColor: #282828;
 $firstBackground: #F0EFEF;
 $secondBackground: #f7f7f7;
 $thirdBackground: #fff;
+$smallDesktopWidth: 940px;
+$tabletWidth: 768px;
+$phoneWidth: 480px;
+
+
+@mixin smallDesk {
+    @media (max-width: $smallDesktopWidth) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tabletWidth) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: $phoneWidth) {
+        @content;
+    }
+}
 
 // header background color #F0EFEF
 //About me background color #f7f7f7
@@ -20,15 +42,21 @@ html {
 }
 
 body {
-    // background: darkcyan;
     font-size: 1.6rem;
     font-family: $mainFont;
     color: $fontColor;
 }
 
 .wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 190px;
+    @media(min-width: 1370px){
+        margin: 0 auto;
+    }
+    @include smallDesk{
+        margin: 0 auto;
+        padding: 0 30px;
+    }
 }
 
 ul,
@@ -57,9 +85,24 @@ a {
 //typography styles
 h1 {
     font-size: 7.2rem;
+    @media (max-width: 660px){
+        font-size: 5rem;
+    }
+    @include tablet {
+        text-align: center;
+    }
+    @media (max-width: 390px){
+        font-size: 3.2rem;
+    }
     span{
         font-size: 11rem;
         font-weight: 700;
+        @media (max-width: 660px){
+            font-size: 7rem;
+        }
+        @media (max-width: 390px){
+            font-size: 3.2rem;
+        }
     }
 }
 
@@ -68,11 +111,21 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
+    @media (max-width: 660px){
+        font-size: 2.4rem;
+    }
+    @include tablet {
+        text-align: center;
+    }
 }
 
 header h2 {
     font-size: 4rem;
     text-transform: none;
+    @media (max-width: 660px){
+        font-size: 2.4rem;
+        margin-top: 30px;
+    }
 }
 
 h2,
@@ -178,3 +231,7 @@ footer {
     border-left: 49vw solid $firstBackground;
 	border-right: 49vw solid $firstBackground;
 }
+
+// .dim {
+//     opacity: 0.5;
+// }
