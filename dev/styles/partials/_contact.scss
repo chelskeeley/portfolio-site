@@ -2,14 +2,30 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    @include tablet {
+        justify-content: space-around;
+    }
     form {
-        width: 45%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 30px;
+        @include tablet {
+            width: 70%;
+        }
+        @media (max-width: 540px){
+            width: 100%;
+        }
     }
     .contact__image {
         width: 45%;
+        @include tablet {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
     }
 }
 
