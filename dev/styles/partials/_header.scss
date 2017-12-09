@@ -81,19 +81,24 @@ nav {
             left: 146px;
             bottom: 8px;
         }
-        &:first-child a:hover:after  {
+        &:first-child a:hover:after,
+        &:first-child a:focus:after   {
             width: 65px;
         }
-        &:nth-child(2) a:hover:after {
+        &:nth-child(2) a:hover:after,
+        &:nth-child(2) a:focus:after {
             width: 30px;
         }
-        &:nth-child(3) a:hover:after {
+        &:nth-child(3) a:hover:after,
+        &:nth-child(3) a:focus:after {
             width: 65px;
         }
-        &:nth-child(4) a:hover:after {
+        &:nth-child(4) a:hover:after,
+        &:nth-child(4) a:focus:after {
             width: 40px;
         }
-        &:last-child a:hover:after {
+        &:last-child a:hover:after,
+        &:last-child a:focus:after {
             width: 40px;
         }
     }
@@ -118,7 +123,8 @@ nav {
             transition: all 0.3s;
             
         }
-        &:hover:before {
+        &:hover:before,
+        &:focus:before {
             background: transparent;
         }
         &:after {
@@ -133,7 +139,8 @@ nav {
             width: 0;
         }
         
-        &:hover {
+        &:hover,
+        &:focus {
             background: $fontColor;
             color: #fff;
         }

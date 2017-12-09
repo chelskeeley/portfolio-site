@@ -1,0 +1,79 @@
+//my works styles
+
+.work {
+    margin-bottom: 100px;
+    h3 {
+        margin: 0;
+    }
+}
+
+.work1 {
+    margin-top: 60px;
+}
+
+.work__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work__imageContainer {
+    width: 35%;
+    margin-top: 60px;
+    img {
+        width: 100%;
+    }
+}
+
+.work__projectInfo {
+    width: 45%;
+}
+
+.projectInfo__type {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.projectInfo__tagContainer {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.projectInfo__tag {
+    display: flex;
+    justify-content: space-around;
+    background: $fontColor;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-right: 20px;
+    i,p {
+        color: #fff;
+    }
+    p {
+        margin: 0 0 0 10px;
+    }
+    i {
+        padding-top: 5px;
+    }
+}
+
+.projectInfo__links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    a {
+        color: $fontColor;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid $fontColor;
+        text-transform: uppercase;
+        transition: all 0.3s;
+        &:hover,
+        &:focus {
+            color: #fff;
+            background: $fontColor;
+        }
+    }
+}
+
