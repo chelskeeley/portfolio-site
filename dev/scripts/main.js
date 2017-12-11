@@ -12,22 +12,23 @@ $(document).ready(function () {
     
     function mediaSize() {
         if (window.matchMedia('(max-width: 940px)').matches) {
-            $('nav').addClass('mobile')
+            $('a').addClass('mobile')
             
         } 
         else {
             /* Reset for CSS changes – Still need a better way to do this! */
-            $('nav').removeClass('mobile');
+            $('a').removeClass('mobile');
             // $('li').removeClass('active');
             // $('nav').removeClass('dim')
         }
     };
     
-    /* Call the function */
-    mediaSize();
     /* Attach the function to the resize event listener */
     window.addEventListener('resize', mediaSize, false);
+    /* Call the function */
+    mediaSize();
     
+
     $('.hamburger').click(function () {
         $(this).toggleClass('open');
         $('li').toggleClass('active');
@@ -36,10 +37,10 @@ $(document).ready(function () {
     });
 
 
-    $('.mobile a').click(function () {
-        $('.hamburger').toggleClass('open');
+    $('.mobile').click(function () {
+        $('.hamburger').removeClass('open');
         $('li').removeClass('active');
-        $('nav').toggleClass('dim');
+        $('nav').removeClass('dim');
 
     });
 

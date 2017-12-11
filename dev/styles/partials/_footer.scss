@@ -11,9 +11,11 @@
     }
     @media (max-width:490px){
         flex-wrap: wrap;
-            flex-grow: 0;
-        
+        flex-grow: 0;
     }
+    @media (max-width:422px){
+            justify-content: center;
+        }
     a {
         padding: 20px;
         display: block;
