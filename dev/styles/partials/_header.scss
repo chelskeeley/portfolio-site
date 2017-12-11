@@ -246,33 +246,37 @@ nav {
     
 }
 
-nav ul .active {
-    opacity: 1;
-    &:first-child  {
-        top: 15px;
-        right: 210px;
-        
+@include smallDesk {
+    nav ul .active {
+        opacity: 1;
+        &:first-child  {
+            top: 15px;
+            right: 210px;
+            
+        }
+        &:nth-child(2) {
+            top: 65px;
+            right: 200px;
+        }
+        &:nth-child(3) {
+            top: 114px;
+            right: 170px;
+            
+        }
+        &:nth-child(4) {
+            top: 161px;
+            right: 120px;
+            
+        }
+        &:last-child {
+            top: 204px;
+            right: 75px;
+            
+        }
     }
-    &:nth-child(2) {
-        top: 65px;
-        right: 200px;
-    }
-    &:nth-child(3) {
-        top: 114px;
-        right: 170px;
-        
-    }
-    &:nth-child(4) {
-        top: 161px;
-        right: 120px;
-        
-    }
-    &:last-child {
-        top: 204px;
-        right: 75px;
-        
-    }
+
 }
+
 
 .dim {
     background: rgba(240,239,239, 0.7);

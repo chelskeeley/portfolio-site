@@ -1,10 +1,16 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const babel = require('gulp-babel');
+const babel = require('babelify');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
+const plumber = require('gulp-plumber');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const notify = require('gulp-notify');
+const browserify = require('browserify');
+
 
 gulp.task('styles', () => {
     return gulp.src('./dev/styles/**/*.scss')
@@ -15,12 +21,29 @@ gulp.task('styles', () => {
         .pipe(reload({ stream: true }));
 });
 
+// gulp.task('scripts', () => {
+//     return gulp.src('./dev/scripts/main.js')
+//         .pipe(babel({
+//             presets: ['env']
+//         }))
+//         .pipe(gulp.dest('./public/scripts'))
+//         .pipe(reload({ stream: true }));
+// });
+
 gulp.task('scripts', () => {
-    return gulp.src('./dev/scripts/main.js')
-        .pipe(babel({
+    return browserify('dev/scripts/main.js', { debug: true })
+        .transform('babelify', {
+            sourceMaps: true,
             presets: ['env']
+        })
+        .bundle()
+        .on('error', notify.onError({
+            message: "Error: <%= error.message %>",
+            title: 'Error in JS 💀'
         }))
-        .pipe(gulp.dest('./public/scripts'))
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(gulp.dest('public/scripts'))
         .pipe(reload({ stream: true }));
 });
 
