@@ -21,15 +21,6 @@ gulp.task('styles', () => {
         .pipe(reload({ stream: true }));
 });
 
-// gulp.task('scripts', () => {
-//     return gulp.src('./dev/scripts/main.js')
-//         .pipe(babel({
-//             presets: ['env']
-//         }))
-//         .pipe(gulp.dest('./public/scripts'))
-//         .pipe(reload({ stream: true }));
-// });
-
 gulp.task('scripts', () => {
     return browserify('dev/scripts/main.js', { debug: true })
         .transform('babelify', {

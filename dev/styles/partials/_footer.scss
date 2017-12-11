@@ -35,7 +35,7 @@
         }
         &:hover,
         &:focus {
-            color: #fff;
+            color: $highlight;
             background: $fontColor;
         }
     }

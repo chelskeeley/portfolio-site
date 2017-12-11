@@ -179,7 +179,7 @@ nav {
         &:hover,
         &:focus {
             background: $fontColor;
-            color: #fff;
+            color: $highlight;
             @include smallDesk {
                 border: 1px solid $fontColor;
                 

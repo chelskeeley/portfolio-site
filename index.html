@@ -23,7 +23,7 @@
                     <span></span>
                 </div>
             </div>
-            <nav>
+            <nav role="navigation">
                 <ul class="nav__menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#aboutMe">About&nbsp;Me</a></li>
@@ -72,39 +72,39 @@
                     <img class='hex2' src="/public/assets/hexagon.png" alt="A hexagonal decorative shape" class="skills__image--shape2">
                 </div><!--end of skills__imageContainer-->
                 <div class="skills__flexIcons">
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-react-plain"></i>
                         <p>React</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-javascript-plain"></i>
                         <p>JavaScript</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-jquery-plain"></i>
                         <p>jQuery</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-html5-plain"></i>
                         <p>HTML5</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-css3-plain"></i>
                         <p>CSS3</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-gulp-plain"></i>
                         <p>Gulp</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-github-plain"></i>
                         <p>GitHub</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-sass-plain"></i>
                         <p>Sass</p>
                     </div>
-                    <div class="skills__icon">
+                    <div class="skills__icon wow bounce">
                         <i class="devicon-git-plain"></i>
                         <p>Git</p>
                     </div>
@@ -117,11 +117,11 @@
         <div class="wrapper">
             <h2 class="section__title">My Work</h2>
             <div class="work1 work" id="work1">
-                <div class="work1__content work__content wow fadeInUp">
+                <div class="work1__content work__content">
                     <div class="work1__imageContainer work__imageContainer">
-                        <img src="/public/assets/codex.jpg" alt="Screenshot of the Codex app, helping you save the best of your code! Coded by Chelsea Keeley">
+                        <img src="/public/assets/codexMockUp.jpg" alt="Screenshot of the Codex app, helping you save the best of your code! Coded by Chelsea Keeley" class="imgLeft">
                     </div>
-                    <div class="work1__projectInfo work__projectInfo">
+                    <div class="work1__projectInfo work__projectInfo wow slideInRight">
                         <h3>Codex</h3>
                         <p class="projectInfo__type">React Web Application</p>
                         <p>Codex is a fully responsive one page web application built on React. A developer's best friends are their editor settings and code snippets, so why not have a cloud-based home for both? Codex allows you to create, save, and store your code snippets so you can access them from anywhere, at any time. </p>
@@ -148,7 +148,7 @@
             </div><!--end of work1-->
             <div class="work2 work" id="work2">
                 <div class="work2__content work__content">
-                    <div class="work2__projectInfo work__projectInfo">
+                    <div class="work2__projectInfo work__projectInfo wow slideInLeft">
                         <h3>Draughted</h3>
                         <p class="projectInfo__type">API jQuery Web Application</p>
                         <p>Draughted is a one page web application for the craftbeer-lover in you! Pulling from the Brewery Database API and powered by jQuery, Draughted can help you find and enjoy local breweries whichever Canadian city you find yourself in. Fully responsive, it can even help you on the go!</p>
@@ -172,16 +172,16 @@
                         </div>
                     </div><!--end of work2__projectInfo-->
                     <div class="work2__imageContainer work__imageContainer">
-                        <img src="/public/assets/draughted.jpg" alt="Screenshot of the Draughted app, helping you find local Canadian breweries! Coded by Chelsea Keeley">
+                        <img src="/public/assets/draughtedMockUp.jpg" alt="Screenshot of the Draughted app, helping you find local Canadian breweries! Coded by Chelsea Keeley" class="imgRight">
                     </div>
                 </div><!--end of work2__content-->
             </div><!--end of work2-->
             <div class="work3 work" id="work3">
                 <div class="work3__content work__content">
                     <div class="work3__imageContainer work__imageContainer">
-                        <img src="/public/assets/makeIt.jpg" alt="Screenshot of the Can You Make it? An app to track attendance for your team! Coded by Chelsea Keeley, Sarah Simpson, Patrick Johnson, and Daryl Amodan.">
+                        <img src="/public/assets/soccerMockUp.jpg" alt="Screenshot of the Can You Make it? An app to track attendance for your team! Coded by Chelsea Keeley, Sarah Simpson, Patrick Johnson, and Daryl Amodan." class="imgLeft">
                     </div>
-                    <div class="work3__projectInfo work__projectInfo">
+                    <div class="work3__projectInfo work__projectInfo wow slideInRight">
                         <h3>Can You Make It?</h3>
                         <p class="projectInfo__type">React and Firebase Web Application</p>
                         <p>Can you make it? is a multi-view react application built as a four-member agency style project to client specifications. With the user-friendly design, you can create a team, add games, add team members, and sign in to rsvp to only your own team's games. Now your team won't be forever asking...can you make it?</p>
@@ -208,7 +208,7 @@
             </div><!--end of work3-->
             <div class="work4 work" id="work4">
                 <div class="work4__content work__content">
-                    <div class="work4__projectInfo work__projectInfo">
+                    <div class="work4__projectInfo work__projectInfo wow slideInLeft">
                         <h3>Millennial Game of Strife!</h3>
                         <p class="projectInfo__type">jQuery Interactive Experience</p>
                         <p>This single page interactive adventure is built with jQuery and javascript. You won't want to stop playing until you find out if you can survive the Millennial Game of Strife!</p>
@@ -231,16 +231,16 @@
                         </div>
                     </div><!--end of work4__projectInfo-->
                     <div class="work4__imageContainer work__imageContainer">
-                        <img src="/public/assets/strife.jpg" alt="Screenshot of the Millennial Game of Strife, try to navigate life as a millennial! Coded by Chelsea Keeley">
+                        <img src="/public/assets/strifeMockUp.png" alt="Screenshot of the Millennial Game of Strife, try to navigate life as a millennial! Coded by Chelsea Keeley" class="imgRight">
                     </div>
                 </div><!--end of work4__content-->
             </div><!--end of work4-->
             <div class="work5 work" id="work5">
                 <div class="work5__content work__content">
                     <div class="work5__imageContainer work__imageContainer">
-                        <img src="/public/assets/zap.jpg" alt="Screenshot of ZAP!, a single page PSD to responsive design conversion.">
+                        <img src="/public/assets/zapMockUp.jpg" alt="Screenshot of ZAP!, a single page PSD to responsive design conversion." class="imgLeft">
                     </div>
-                    <div class="work5__projectInfo work__projectInfo">
+                    <div class="work5__projectInfo work__projectInfo wow slideInRight">
                         <h3>ZAP!</h3>
                         <p class="projectInfo__type">PSD to Responsive Design</p>
                         <p>ZAP! is a single page website, developed from a PSD design. As a fully responsive website, you can enjoy the same great ZAP! experience from your desktop right down to your smartphone!</p>

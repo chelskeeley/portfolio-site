@@ -37,6 +37,18 @@
     }
     img {
         width: 100%;
+        border-radius: 3px;
+    }
+    .imgRight {
+        box-shadow: 3px 3px 3px rgba(40,40,40,0.7);
+
+            // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+
+    }
+    .imgLeft {
+        box-shadow: -3px 3px 3px rgba(40,40,40,0.7);
+        
     }
 }
 
@@ -64,7 +76,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     @include phone {
-        // justify-content: space-around;
         justify-content: flex-start;
 
     }
@@ -123,7 +134,7 @@
         }
         &:hover,
         &:focus {
-            color: #fff;
+            color: $highlight;
             background: $fontColor;
         }
     }
