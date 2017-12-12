@@ -52,6 +52,10 @@
     }
 }
 
+.ie .work__imageContainer {
+    min-height: 1px;
+}
+
 .work__projectInfo {
     width: 45%;
     @media (max-width: 1200px) {

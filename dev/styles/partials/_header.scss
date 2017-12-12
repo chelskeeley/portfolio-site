@@ -3,7 +3,7 @@
 //general header
 header {
     min-height: 100vh;
-    background: linear-gradient( rgba(240,239,239,0.8), rgba(240,239,239,0.8) ), url(../assets/hero2.jpg);
+    background: linear-gradient( rgba(240,239,239,0.6), rgba(240,239,239,0.6) 70%,rgba(240,239,239,1) 98% ), url(../assets/heroLake.jpg);
     background-size: cover;
     background-position: center;
     h1 {
@@ -185,6 +185,12 @@ nav {
                 
             }
         }
+    }
+}
+//for firefox only, fixes before element alignment
+@-moz-document url-prefix() {
+    nav a::before{
+        bottom: 4px;
     }
 }
 

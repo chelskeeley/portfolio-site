@@ -4,7 +4,7 @@ $fontColor: #282828;
 $firstBackground: #F0EFEF;
 $secondBackground: #f7f7f7;
 $thirdBackground: #fff;
-$highlight: #60b0f4;
+$highlight: #67bc9a;
 $smallDesktopWidth: 940px;
 $tabletWidth: 768px;
 $phoneWidth: 480px;
@@ -180,18 +180,42 @@ footer {
 .first {
     border-top: 20vh solid $firstBackground;
     border-left: 49vw solid $secondBackground;
-	border-right: 49vw solid $secondBackground;
+    border-right: 49vw solid $secondBackground;
+    @media (max-width: 825px){
+        border-left: 48vw solid $secondBackground;
+        border-right: 48vw solid $secondBackground;
+    }
+    @media (max-width: 415px){
+        border-left: 47vw solid $secondBackground;
+        border-right: 47vw solid $secondBackground;
+    }
 }
 
 .second {
 	border-top: 20vh solid $secondBackground;
     border-left: 49vw solid $thirdBackground;
-	border-right: 49vw solid $thirdBackground;
+    border-right: 49vw solid $thirdBackground;
+    @media (max-width: 825px){
+        border-left: 48vw solid $thirdBackground;
+        border-right: 48vw solid $thirdBackground;
+    }
+    @media (max-width: 415px){
+        border-left: 47vw solid $thirdBackground;
+        border-right: 47vw solid $thirdBackground;
+    }
 }
 
 .third {
     border-top: 20vh solid $thirdBackground;
     border-left: 49vw solid $firstBackground;
-	border-right: 49vw solid $firstBackground;
+    border-right: 49vw solid $firstBackground;
+    @media (max-width: 825px){
+        border-left: 48vw solid $firstBackground;
+        border-right: 48vw solid $firstBackground;
+    }
+    @media (max-width: 415px){
+        border-left: 47vw solid $thirdBackground;
+        border-right: 47vw solid $thirdBackground;
+    }
 }
-
+ 

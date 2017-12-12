@@ -8,6 +8,7 @@
     }
 }
 
+
 .aboutMe__description {
     width: 50%;
     padding-top: 10px;
@@ -15,6 +16,15 @@
         width: 100%;
         order: 2;
         
+    }
+}
+
+//removes image padding for Internet Explorer (classes add via browserClass.js), 1px min-height collapses the div around the image to solve ie11 image container height bug
+.ie .aboutMe__headshot {
+    padding: 20px;
+    min-height: 1px;
+    img {
+        padding: 0;
     }
 }
 

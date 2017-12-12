@@ -44,7 +44,16 @@ $(document).ready(function () {
     });
     //end of mobile nav functionality
 
+    //initialize wow.js effects
     new WOW().init();
+
+    //clear form on submit
+    $('form').on('submit', ()=>{
+        $('input[type=text]').empty()
+        $('input[type=email]').empty()
+    });
+
+
 });
 
 
