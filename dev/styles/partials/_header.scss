@@ -3,7 +3,7 @@
 //general header
 header {
     min-height: 100vh;
-    background: linear-gradient( rgba(240,239,239,0.6), rgba(240,239,239,0.6) 70%,rgba(240,239,239,1) 98% ), url(../assets/heroLake.jpg);
+    background: linear-gradient( rgba(240,239,239,0.1), rgba(240,239,239,0.1) 70%,rgba(240,239,239,0.9) 98% ), url(../assets/heroDots.jpg);
     background-size: cover;
     background-position: center;
     h1 {
@@ -187,6 +187,17 @@ nav {
         }
     }
 }
+
+.nav__menu--active {
+    background: $fontColor;
+            color: $highlight;
+            @include smallDesk {
+                border: 1px solid $fontColor;
+            }
+}
+
+
+
 //for firefox only, fixes before element alignment
 @-moz-document url-prefix() {
     nav a::before{

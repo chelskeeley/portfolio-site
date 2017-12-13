@@ -160,7 +160,7 @@ footer {
 
 .triangle {
 	width: 100%;
-	height: 0;
+    height: 0;
 }
 
 .myWorks {
@@ -214,8 +214,8 @@ footer {
         border-right: 48vw solid $firstBackground;
     }
     @media (max-width: 415px){
-        border-left: 47vw solid $thirdBackground;
-        border-right: 47vw solid $thirdBackground;
+        border-left: 47vw solid $firstBackground;
+        border-right: 47vw solid $firstBackground;
     }
 }
  

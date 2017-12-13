@@ -2,10 +2,13 @@ import $ from "jquery";
 import { smoothScroll } from "jquery-smooth-scroll";
 import { WOW } from "wowjs";
 
+let chelsea = {};
 
-$(document).ready(function () {
+// $(document).ready(function ()
 
-    //smooth scroll on nav
+chelsea.effects = () => {
+
+    // smooth scroll on nav
     $('nav a').smoothScroll({
         speed: 1500,
         easing: 'swing'
@@ -53,87 +56,47 @@ $(document).ready(function () {
         $('input[type=email]').empty()
     });
 
+    
 
+    //put ids on sections that we are scrolling
+    // CHANGE SIDEBAR LOCATION INDICATOR
+    chelsea.scrolling = function () {
+
+        // GET PAGE LOCATION
+        $(window).scroll(function () {
+            let location = $(this).scrollTop();
+
+            // GET SECTION AT LOCATION
+            $('section').each(function () {
+                let target = $(this).offset().top;
+                let targetID = $(this).attr('id');
+
+                // UPDATE CURRENT LOCATION
+                if (location >= target) {
+                    $('.nav__menu--active').removeClass('nav__menu--active');
+                    $(`#${targetID}--active`).addClass('nav__menu--active');
+                } else if ((target - location) <=200){
+                    $('.nav__menu--active').removeClass('nav__menu--active');
+                    $(`#${targetID}--active`).addClass('nav__menu--active');
+                } else if (location === 0){
+                    $('.nav__menu--active').removeClass('nav__menu--active');
+                    $(`#home--active`).addClass('nav__menu--active');
+                }
+            });
+        });
+    };
+    chelsea.scrolling();
+
+
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
+    });
+};
+
+chelsea.init = () => {
+    chelsea.effects();
+}
+
+$(document).ready(function () {
+    chelsea.init();
 });
-
-
-
-
-
-
-
-// $(document).ready(function () {
-
-//     window.addEventListener('resize', mediaSize, false);
-//     mediaSize();
-    
-
-//     $('nav a').smoothScroll({
-//         speed: 1500,
-//         easing: 'swing'
-//     });
-
-//     // start of click transition for navicon
-    
-    
-//     function mediaSize() {
-//         // console.log('should fire on resize');
-//         console.log(window.matchMedia('(max-width: 940px)').matches);
-//         if (window.matchMedia('(max-width: 940px)').matches) {
-//             console.log('smaller than 940px')
-//             $('nav a').addClass('mobile');
-
-//             $('.mobile').click(function () {
-//                 console.log('IT WORKS!!!');
-//                 if ($('.hamburger').hasClass('open')) {
-//                     $('.hamburger').removeClass('open');
-//                     // $('li').toggleClass('active');
-//                     // $('nav').toggleClass('dim');
-//                 } 
-//                 // else {
-//                 //     $('.hamburger').addClass('open');
-//                 // }
-
-//                 $('li').toggleClass('active');
-//                 $('nav').toggleClass('dim');
-
-//             });
-
-//             $('.hamburger').click(function () {
-//                 console.log('listening');
-//                 // $('.hamburger').toggleClass('open');
-//                 if ($('.hamburger').hasClass('open')) {
-//                     $('.hamburger').removeClass('open');
-//                     // $('li').removeClass('active');
-//                     // $('nav').removeClass('dim');
-//                 } else {
-//                     $('.hamburger').addClass('open');
-//                     // $('li').addClass('active');
-//                     // $('nav').addClass('dim');
-//                 }
-//                 $('li').toggleClass('active');
-//                 $('nav').toggleClass('dim');
-
-//             });
-//         } 
-//         else {
-//             /* Reset for CSS changes – Still need a better way to do this! */
-//             $('nav a').removeClass('mobile');
-//             $('.hamburger').removeClass('open');
-//             $('li').removeClass('active');
-//             $('nav').removeClass('dim');
-//             console.log('should be removed');
-
-//         }
-//     };
-    
-//     /* Attach the function to the resize event listener */
-//     // window.addEventListener('resize', mediaSize, false);
-//     /* Call the function */
-//     // mediaSize();
-    
-
-
-
-
-// });
