@@ -42,8 +42,22 @@ header {
         }
         &:after {
             left: 63px;
+            bottom: 45px;
+            @include smallDesk {
             bottom: 17px;
+            }
         }
+    }
+}
+
+.laptopIcon {
+    width: 60px;
+    height: 60px;
+    img{
+        width: 100%;
+    }
+    @include smallDesk {
+        display: none;
     }
 }
 
