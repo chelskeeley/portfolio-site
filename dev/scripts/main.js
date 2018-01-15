@@ -2,7 +2,7 @@ import $ from "jquery";
 import { smoothScroll } from "jquery-smooth-scroll";
 import { WOW } from "wowjs";
 
-let chelsea = {};
+let chelsea = {}; 
 
 // $(document).ready(function ()
 
